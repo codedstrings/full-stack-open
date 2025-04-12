@@ -18,13 +18,14 @@ sequenceDiagram
     server-->>browser: the JavaScript file (spa.js)
     deactivate server
 
-    Note right of browser: The browser executes the JavaScript code to fetch the JSON from the server
+    activate browser
+    Note over browser: Execute JS code to fetch JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
 
-    Note right of browser: The browser renders the notes using DOM manipulation
-
+    activate browser
+    Note over browser: Render the notes using DOM manipulation
 ```
